@@ -13,7 +13,18 @@ NAME: SHUBHAVI.M
 
 REGISTER NUMBER:212223040199
 
-## PROGRAM
+## PROGRAM       
+##client
+~~~
+import socket
+s=socket.socket()
+s.connect(('localhost',8000))
+while True:
+    msg=input("Client > ")
+    s.send(msg.encode())
+    print("Server > ",s.recv(1024).decode())
+
+~~~
 ##server
 ~~~
  import socket
@@ -26,25 +37,9 @@ REGISTER NUMBER:212223040199
  c.send(ClientMessage.encode())
 ~~~
 
-##client
-~~~
-import socket
-s=socket.socket()
-s.connect(('localhost',8000))
-while True:
-    msg=input("Client > ")
-    s.send(msg.encode())
-    print("Server > ",s.recv(1024).decode())
-
-~~~
-
 ## OUPUT
-### server
-![Screenshot 2024-10-03 134736](https://github.com/user-attachments/assets/e2214461-9b30-483a-98f9-fdac86b232e2)
+![Screenshot 2024-11-05 234044](https://github.com/user-attachments/assets/23b3c406-554c-4496-8aa4-e67019c5805b)
 
-
-### client
-![Screenshot 2024-10-03 134650](https://github.com/user-attachments/assets/cb1e18b7-4040-4512-b3f5-9fd848fc82b7)
 
 
 ## RESULT
